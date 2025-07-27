@@ -46,7 +46,6 @@ def plot_world_map(df, locations, color, hover_name, animation_frame,
         title=title,
         range_color=(vmin, vmax) if vmin is not None and vmax is not None else None
     )
-
     fig.update_layout(
         width=width,
         height=height,
@@ -67,14 +66,18 @@ def plot_world_map(df, locations, color, hover_name, animation_frame,
             showframe=False,
             showcoastlines=True,
             projection_type=projection_type,
-            landcolor="lightgray"
+            landcolor="lightgray",
+            bgcolor='rgba(0,0,0,0)'  # <- transparent background under map
         ),
         title=dict(
             text=title,
             x=0.5,
             xanchor="center"
-        )
+        ),
+        paper_bgcolor='rgba(0,0,0,0)',  # <- transparent surrounding
+        plot_bgcolor='rgba(0,0,0,0)'    # <- transparent plot area
     )
+
 
     return fig
 
