@@ -72,7 +72,11 @@ def plot_world_map(df, locations, color, hover_name, animation_frame,
         title=dict(
             text=title,
             x=0.5,
-            xanchor="center"
+            xanchor="center",
+            font=dict(
+            size=30,       
+            color="white" 
+            )
         ),
         paper_bgcolor='rgba(0,0,0,0)',  # <- transparent surrounding
         plot_bgcolor='rgba(0,0,0,0)'    # <- transparent plot area
