@@ -5,7 +5,7 @@ from dash import dcc, html, Input, Output
 import plotly.express as px
 
 # === Load Data ===
-df = pd.read_csv("who_tb_data_agg.csv")
+df = pd.read_csv("data/who_tb_data_agg.csv")
 
 # === Feature Labels for Display ===
 feature_labels = {
